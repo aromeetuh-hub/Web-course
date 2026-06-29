@@ -1,0 +1,16 @@
+body{
+    background-color: yellow;
+      background-image:linear-gradient(to bottom, darkblue,orange);    
+        background-repeat:no-repeat;
+}
+
+.star{
+  width: 60px;
+  height: 60px;
+  background-color: brown;
+  animation: twinkle 2s infinite alternate;
+}
+@keyframes twinkle{
+  from{background-color: black;}
+  to{background-color: chartreuse;}
+}

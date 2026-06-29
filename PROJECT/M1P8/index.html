@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: turquoise;
+            color: black;
+        }
+        .weather-card{
+            background-image: linear-gradient(to bottom right, lightblue, magenta);
+            border: 3px solid white
+        }
+        h1{
+            color: white;
+            font-size: 36px;
+        }
+        .subtitle{
+            color: blueviolet;
+        }
+        .details{
+            font-size: 18px;
+            color: gray
+        }
+        .weather-icon{
+            font-size: 70px;
+            animation: floatCloud 3s infinite alternate;
+        }
+        @keyframes floatCloud {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+        #temperature{
+            font-size: 48px;
+            color: darkblue;
+            font-weight: bold;
+        }
+        .forecast-section{
+            width: 600px;
+            border: 3px solid white;
+            border-radius: 15px;
+            background-image: radial-gradient(circle, blueviolet, purple);
+            color: brown
+        }
+    </style>
+</head>
+<body>
+    <h1>My weather app homepage</h1>
+    <p class="subtitle">Check today's weather and plan your day better</p>
+    <div class="weather-card">
+        <h2>Today's Weather</h2>
+        <div class="weather-icon">Cloud</div>
+        <p id="temperature">22°C</p>
+
+        <p class="details">City: Barcelona</p>
+        <p class="details">Humidity: 62%</p>
+        <p class="details">Wind speed: 12 km/h</p>
+        <p class="details">Condition: Cloudy</p>
+    </div>
+
+    <h2>Weekly Forecast</h2>
+    <div class="forecast-section">
+        <h3 class="forecast title">Next 5 days</h3>
+        <p class="forecast details">Monday: 24°C, Sunny</p>
+        <p class="forecast details">Tuesday: 20°C, Rainy</p>
+        <p class="forecast details">Wednesday: 22°C, Cloudy</p>
+        <p class="forecast details">Thursday: 25°C, Stormy</p>
+        <p class="forecast details">Friday: 21°C, Windy</p>
+    </div>
+</body>
+</html>

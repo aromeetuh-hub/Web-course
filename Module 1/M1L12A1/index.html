@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: lightyellow;
+            padding: 65px;
+        }
+        h1,h2{
+            color:darkorange;
+        }
+        .top{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color:blueviolet;
+            color: white;
+        }
+        .list{
+            background-color:aqua;
+            border:2px solid darkorange;
+            padding:10px
+        }
+        .note{
+            position:relative;
+            background-color:crimson;
+            color:beige;
+            left:50px;
+        }
+        .card{
+            position:relative;
+            background-color:black;
+            color:white;
+            padding: 15px;
+            border:2px; solid white;
+        }
+        .badge{
+            position:absolute;
+            top: 8px;
+            background:yellow;
+            right: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="top">My pet page</div>
+    <h1>Meet Luna</h1>
+    
+     <h2>Static</h2>
+     <div class="list">Breed: Labrador Retriever</div>
+
+<h2>Relative</h2>
+<p>This note shifts right from its normal spot</p>
+<div class="note">Pet of the month</div>
+
+<h2>Absolute</h2>
+<p>The badge is pinned to the corner of the card</p>
+<div class="card">
+    <p>Luna- Labrador</p>
+    <div class="badge">Adopted</div>
+</div>
+</body>
+</html>
