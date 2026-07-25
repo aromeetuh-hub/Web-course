@@ -24,29 +24,29 @@
 
     <label for="sum"></label>
     
+   
     <p id="result"></p>
-    <p id="sum"></p>
+
 
     <script>
         function sum(a,b) {
-            let sum = a+b;
-            document.getElementById("result").innerHTML= sum;
-          
+            let result = a+b;
+            document.getElementById("result").innerHTML = "The sum of 999 + 10 = " + result;
         }
 
         function num1(a,b)  {
             let result= a-b;
-            document.getElementById("result").innerHTML= result;
+            document.getElementById("result").innerHTML= "The difference of 999 - 10 = " + result;
         }
 
         function num2(a,b) {
             let result=a*b;
-            document.getElementById("result").innerHTML= result;
+            document.getElementById("result").innerHTML= "The product of 999 * 10 = " +result;
         }
 
         function num3(a,b) {
             let result=a/b;
-            document.getElementById("result").innerHTML= result;
+            document.getElementById("result").innerHTML="The quotient of 999/10 = "+ result;
         }
 
     </script>
