@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sum(999, 10)">
+        Add 2 numbers
+    </button>
+    
+    <button onclick="num1(999, 10)">
+        Subtract 2 numbers
+    </button>
+    
+    <button onclick="num2(999, 10)">
+        Multiply 2 numbers
+    </button>
+
+    <button onclick="num3(999, 10)">
+        Divide 2 numbers
+    </button>
+
+    <label for="sum"></label>
+    
+    <p id="result"></p>
+    <p id="sum"></p>
+
+    <script>
+        function sum(a,b) {
+            let sum = a+b;
+            document.getElementById("result").innerHTML= sum;
+          
+        }
+
+        function num1(a,b)  {
+            let result= a-b;
+            document.getElementById("result").innerHTML= result;
+        }
+
+        function num2(a,b) {
+            let result=a*b;
+            document.getElementById("result").innerHTML= result;
+        }
+
+        function num3(a,b) {
+            let result=a/b;
+            document.getElementById("result").innerHTML= result;
+        }
+
+    </script>
+</body>
+</html>
