@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+  <head>
+    <head>
+        <title>Module 5 - Lesson 1 - Activity 1 - Lucky Draw</title>
+    </head>
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background: aliceblue;
+        text-align: center;
+        padding: 30px;
+      }
+
+      h1 {
+        color: navy;
+      }
+
+      input {
+        padding: 8px;
+        margin: 5px;
+        border: 2px solid navy;
+        border-radius: 6px;
+        width: 220px;
+      }
+
+      button {
+        background: navy;
+        color: white;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      #timer {
+        color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lucky Draw</h1>
+    <p>Enter your name and guess a number to win!</p>
+
+    <input required type="text" id="name" placeholder="Your name"/><br />
+    <p id="msg-name"></p>
+
+    <input
+    required
+      type="number"
+      id="guess"
+      placeholder="Guess a number (1 to 5)"
+      min="1"
+      max="5"
+    /><br />
+    <p id="msg-guess"></p>
+
+    <button onclick="checkForm()">Try My Luck!</button>
+    <p id="result"></p>
+    <p id="timer"></p>
+
+    <script>
+        let seconds = 0;
+        setInterval(function() {
+            seconds= seconds + 1;
+            document.getElementById("timer").textContent = `You have been here for ${seconds} seconds!`;
+        }, 1000);
+
+        function checkForm(){
+            let name = document.getElementById("name").value;
+            let guess = document.getElementById("guess").value;
+            let formIsOk = true;
+
+            if(name==""){
+                document.getElementById("msg-name").textContent= "Please enter your name";
+                document.getElementById("msg-name").style.color = "red";
+                document.getElementById("name").style.border = "2px solid red";;
+                formIsOk= false;
+            }
+            else{
+                document.getElementById("msg-name").textContent= "That's a great name!";
+                document.getElementById("msg-name").style.color = "green"
+                document.getElementById("name").style.border = "2px solid blue";;
+
+            }
+
+// VALIDATION FOR GUESS INPUT
+             if(guess==""){
+                document.getElementById("msg-guess").textContent= "Please enter a number!";
+                document.getElementById("msg-guess").style.color = "red";
+                document.getElementById("guess").style.border = "2px solid red";;
+                formIsOk= false;
+            }
+            else{
+                document.getElementById("msg-guess").textContent= "Hope you Win!";
+                document.getElementById("msg-guess").style.color = "green";
+                document.getElementById("guess").style.border = "2px solid blue";
+            }
+
+            if (formIsOk) {
+                let luckyNumber = Math.floor(Math.random()*5) + 1;
+            console.log(luckyNumber);    
+
+            if (guess == luckyNumber){
+                document.getElementById("result").textContent= "You Win!";
+                document.getElementById("result").style.color = "green";
+            }
+            else {
+                document.getElementById("result").textContent = `That's wrong. The correct number was ${luckyNumber}`;
+                document.getElementById("result").style.color= "red";
+            }
+        }
+    }
+
+    </script>
+  </body>
+</html>
+
