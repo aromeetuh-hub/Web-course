@@ -1,0 +1,52 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+  background: rgba(11, 16, 32, 0.6);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  color: dodgerblue;
+}
+body{
+    background-image: linear-gradient(to bottom right, navy, red, magenta);
+    background-repeat: no-repeat;
+    
+}
+span{
+    color: navy;
+}
+:root {
+  --bg: #0b1020;
+  --bg-soft: #121a2b;
+  --panel: rgba(18, 26, 43, 0.9);
+  --panel-alt: #1a2340;
+  --text: #eaf2ff;
+  --muted: #b3bfd6;
+  --primary: #7c9cff;
+  --primary-strong: #5b7af7;
+  --accent: #7ef0d1;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 24px 60px rgba(5, 10, 25, 0.45);
+}
+.card-glow {
+  position: absolute;
+  inset: -70px 40px auto auto;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(124, 156, 255, 0.8), transparent 70%);
+  filter: blur(18px);
+}
+#AboutMe{
+    color: #0b1020;
+    text-align: center;
+    font-family: var(--accent);
+    font-weight: bolder;
+}
+.about-title{
+    font-size: 50px;
+}
+.about-info{
+    font-family: cursive;
+}
+abbr{background-color:#7ef0d1;}
